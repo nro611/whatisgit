@@ -27,23 +27,24 @@ h1{
     color: brown;
     text-transform: uppercase;
     margin: 1%;
-    font-size: 42px;
+    font-size: 30px;
 }
 h1::first-letter{
-    font-size: 63px;
+    font-size: 42px;
 }
 
 h2{
     font-family: 'Open Sans', sans-serif;
     color: brown;
     text-transform: uppercase;
+    margin: 1%;
 }
 h2::first-letter{
-    font-size: 45px;
+    font-size: 35px;
 }
 
 p{
-    font-size: 28px;
+    font-size: 20px;
 }
 
 #map {
@@ -52,20 +53,22 @@ p{
 
 table {
     font-size: 23px;
-    width: 100%;
-    margin: 1%;
+    width: 99%;
+    margin-right: 0.5%;
+    margin-left: 0.5%;
+    border-collapse: collapse;
 }
 tr{
-    height: 38px;
+    height: 30px;
 }
 th {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-style: italic;
-    font-size: 45px;
+    font-size: 30px;
     color: #28A745;
 }
 td{
-    font-size: 28px;
+    font-size: 20px;
 }
 
 li {
@@ -78,16 +81,21 @@ li {
 .menuIconRight {
     width: 55px;
     float: right;
-    margin-right: 2%;
+    margin-right: 0%;
 }
 #naviButtons {
     text-align: center;
+}
+.button:hover{
+    background-color: rgb(255, 208, 0);
+    color: brown;
+
 }
 
 .button {
     display: inline-block;
     background-color: brown;
-    padding: 13px 0;
+    padding: 7px 0;
     margin: 0;
     width: 32%;
     overflow: hidden;
@@ -97,7 +105,7 @@ li {
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
     font-weight: bolder;
-    font-size: 32px;
+    font-size: 26px;
 }
 
 img{
@@ -118,11 +126,21 @@ img{
 .actionImage {
     float: right;
     margin: 1.5%;
-    width: 400px;
+    width: 250px;
     border-radius: 7px;
 }
 
 .actionText {
     margin: 2%;
-    font-size: 30px;
+    font-size: 20px;
+}
+.openHours li {
+    font-size: 20px;
+}
+
+tbody tr:nth-child(even){
+    background-color: khaki;
+}
+tbody tr:nth-child(odd){
+    background-color: rgba(240, 230, 140, 0.473);
 }
