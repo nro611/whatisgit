@@ -68,7 +68,7 @@ li {
     padding: 2px 0;
     margin: 0;
     width: 32%;
-    overflow: auto;
+    overflow: hidden;
     border: none;
     border-radius: 7px;
     color: rgb(255, 208, 0);
