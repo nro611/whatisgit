@@ -86,13 +86,14 @@ li {
 #naviButtons {
     text-align: center;
 }
-.button:hover{
+.buttonMenu:hover{
     background-color: rgb(255, 208, 0);
     color: brown;
+    text-decoration: none;
 
 }
 
-.button {
+.buttonMenu {
     display: inline-block;
     background-color: brown;
     padding: 7px 0;
@@ -106,13 +107,20 @@ li {
     font-family: 'Roboto', sans-serif;
     font-weight: bolder;
     font-size: 26px;
+    height: 30px;
+}
+
+.buttonFix {
+    height: 43px;
+    margin: 10px 4px;
+    padding: 2.5px;
 }
 
 img{
     max-width: 100%;
 }
 
-.container {
+.containerAction {
     display: inline-block;
     width: 98%;
     height: 10%;
@@ -148,6 +156,7 @@ tbody tr:nth-child(odd){
     width: 400px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 0;
     border: solid 1.5px #28A745;
     padding: 20px 20px;
     font-size: 22px;
