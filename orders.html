@@ -92,7 +92,8 @@
             <input class="form-control" type="number" name="quantity" id="quantity" min="1" max="10">
         </div>
         <div>
-            <input type="button" value="Rendelés leadása"> Ár: <span class="greenText">1200</span> Ft
+            <button onclick="calcAmount()" type="button" class="btn btn-success">Rendelés leadása</button>
+            Ár: <span class="greenText show-amount">0</span> Ft
         </div>
     </form>
     <script src="js/main.js"></script>
