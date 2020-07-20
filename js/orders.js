@@ -35,7 +35,7 @@ function finalCalculation() {
     let sauceType = parseInt(document.querySelector("#sauceList").value);
 
     let totalPrice = quantity * (price + extraPrice + sauceType);
-    totalPrice = totalPrice < 5000 ? totalPrice = totalPrice + delivery : totalPrice = totalPrice; 
+    totalPrice = totalPrice < 5000 ? totalPrice + delivery : totalPrice; 
     let showAmount = document.querySelector("span.show-amount");
     showAmount.innerHTML = totalPrice;
 }
