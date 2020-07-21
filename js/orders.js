@@ -12,7 +12,7 @@ function calcAmount() {
 
     validatingInputs(name, email, address, comment, quantity);
 }
-//inputok validálása
+
 function validatingInputs(name, email, address, comment, quantity) {
     if (!name || name.length < 2) {
         alert("Név megadása kötelező!");

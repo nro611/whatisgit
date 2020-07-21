@@ -1,0 +1,18 @@
+.weather-container {
+    background-color: brown;
+    margin: 1%;
+    padding: 0px 6px;
+    padding-bottom: 6px;
+    border-radius: 6px;
+
+}
+
+
+.temperature {
+    text-align: right;
+}
+
+.weather-text {
+    color: rgb(255, 208, 0);
+    font-size: 26px;
+}

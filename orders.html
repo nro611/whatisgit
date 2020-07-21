@@ -5,11 +5,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/weather.css">
     <link rel="stylesheet" href="lib/bootstrap-4.5.0-dist/css/bootstrap.min.css">
     <title>Rendelés</title>
 </head>
 
 <body>
+    <div class="weather-container">
+        <div class="row">
+            <div class="col-2 weather-text">Időjárás</div>
+            <div class="col-8"></div>
+            <div class="col-2 temperature weather-text">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <select class="form-control" id="day">
+                    <option value="0">Hétfő</option>
+                    <option value="1">Kedd</option>
+                    <option value="2">Szerda</option>
+                    <option value="3">Csütörtök</option>
+                    <option value="4">Péntek</option>
+                    <option value="5">Szombat</option>
+                    <option value="6">Vasárnap</option>
+                </select>
+            </div>
+            <div class="col-1">
+                <button onclick="weatherWidget()" type="button" class="btn btn-warning">Mutasd!</button>
+            </div>
+            <div class="col-1"></div>
+            <div class="col-1"></div>
+            <div class="col-1"></div>
+            <div class="col-1"></div>
+            <div class="col-1"></div>
+            <div class="col-1"></div>
+            <div class="col-1"></div>
+            <div class="col-1"></div>
+            <div class="col-1"></div>
+        </div>
+    </div>
     <div id="naviButtons">
         <span id="1button">
             <a href="contact.html" class="buttonMenu buttonFix">Elérhetőség</a>
@@ -99,6 +133,7 @@
         </div>
     </form>
     <script src="js/orders.js"></script>
+    <script src="js/weather.js"></script>
 </body>
 
 </html>
