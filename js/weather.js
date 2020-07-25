@@ -1,3 +1,4 @@
+var offerText = document.querySelector(".offer-text");
 var temperatures = [-11.2, 14.4, 13.0, 17.3, 21.7, 18.2, 28];
 var temperatureUpperLimits = [0, 15, 20, 25, 30];
 var offers = ["Ma forró csokit is árusítunk",
@@ -9,7 +10,6 @@ var offers = ["Ma forró csokit is árusítunk",
 
 //temperatures array-ből kiválaszt egy elemet a nap függvényében és kiírja, mint hőmérséklet és a hozzá tartozó ajánlatot
 function weatherWidget() {
-    var offerText = document.querySelector(".offer-text");
     var day = document.getElementById("day");
     var dayIndex = day.selectedIndex;
     var temperatureDiv = document.querySelector(".temperature");
