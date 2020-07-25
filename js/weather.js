@@ -11,7 +11,7 @@ var offers = ["Ma forró csokit is árusítunk",
 function weatherWidget() {
     var offerText = document.querySelector(".offer-text");
     var day = document.getElementById("day");
-    var dayIndex = day.options[day.selectedIndex].value;
+    var dayIndex = day.selectedIndex;
     var temperatureDiv = document.querySelector(".temperature");
     temperatureDiv.innerHTML = temperatures[dayIndex] + " &deg;C"
 
