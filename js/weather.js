@@ -12,8 +12,8 @@ var offers = ["Ma forró csokit is árusítunk",
 function weatherWidget() {
     var day = document.getElementById("day");
     var dayIndex = day.selectedIndex;
-    var temperatureDiv = document.querySelector(".temperature");
-    temperatureDiv.innerHTML = temperatures[dayIndex] + " &deg;C"
+    var temperatureDiv = document.querySelector(".right");
+    temperatureDiv.innerHTML = temperatures[dayIndex] + " &deg;C";
 
     for (let i = 0; i < temperatureUpperLimits.length; i++) {
         if (temperatures[dayIndex] <= temperatureUpperLimits[i]) {
@@ -22,4 +22,41 @@ function weatherWidget() {
         };
     }
 }
+
+function minTempStats() {
+    var minTemp = temperatures.length != 0 ? temperatures[0] : 0;
+    var minText = document.querySelector(".min-temp");
+    for (let i = 0; i < temperatures.length; i++) {
+        if (temperatures[i] < minTemp) {
+            minTemp = temperatures[i];
+        }
+    }
+    minText.innerHTML = "Minimum: " + minTemp + " &deg;C";
+}
+
+
+function maxTempStats() {
+    var maxTemp = temperatures.length != 0 ? temperatures[0] : 0;
+    var maxText = document.querySelector(".max-temp");
+    for (let i = 0; i < temperatures.length; i++) {
+        if (temperatures[i] > maxTemp) {
+            maxTemp = temperatures[i];
+        }
+    }
+    maxText.innerHTML = "Maximum: " + maxTemp + " &deg;C";
+}
+
+function avgTempStats() {
+    var avgTemp = 0;
+    var avgText = document.querySelector(".avg-temp");
+    for (let i = 0; i < temperatures.length; i++) {
+        avgTemp += temperatures[i];
+        }
+    avgTemp = avgTemp / temperatures.length;
+    avgText.innerHTML = "Átlag: " + avgTemp.toFixed(2) + " &deg;C";
+}
+
+
+
+
 window.onload = weatherWidget;

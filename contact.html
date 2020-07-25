@@ -16,7 +16,7 @@
         <div class="row">
             <div class="col-2 weather-text">Időjárás</div>
             <div class="col-1"></div>
-            <div class="col-9 temperature weather-text">
+            <div class="col-9 right weather-text">
             </div>
         </div>
         <div class="row">
@@ -35,7 +35,12 @@
                 <button onclick="weatherWidget()" type="button" class="btn btn-warning">Mutasd!</button>
             </div>
             <div class="col-1"></div>
-            <div class="col-8 offer-text"></div>
+            <div class="col-8 offer-text right"></div>
+        </div>
+        <div class="row">
+            <div class="col-4 min-temp offer-text left"></div>
+            <div class="col-4 max-temp offer-text center"></div>
+            <div class="col-4 avg-temp offer-text right"></div>
         </div>
     </div>
     <div id="naviButtons">
@@ -73,6 +78,9 @@
         megállónál kell leszállni.</p>
     <img id="map" src="img/map.png" alt="Térkép">
     <script src="js/weather.js"></script>
+    <script>minTempStats()</script>
+    <script>maxTempStats()</script>
+    <script>avgTempStats()</script>
 </body>
 
 </html>

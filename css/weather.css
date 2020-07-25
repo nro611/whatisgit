@@ -7,9 +7,14 @@
 
 }
 
-
-.temperature {
+.right {
     text-align: right;
+}
+.left {
+    text-align: left;
+}
+.center {
+    text-align: center;
 }
 
 .weather-text {
@@ -18,7 +23,6 @@
 }
 
 .offer-text {
-    text-align: right;
     color: rgb(255, 208, 0);
     font-size: 22px;
 }
