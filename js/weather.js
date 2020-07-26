@@ -10,13 +10,12 @@ var offers = ["Ma forró csokit is árusítunk",
 
 //temperatures array-ből kiválaszt egy elemet a nap függvényében és kiírja, mint hőmérséklet és a hozzá tartozó ajánlatot
 function weatherWidget() {
-    var day = document.getElementById("day");
-    var dayIndex = day.selectedIndex;
+    var day = document.getElementById("day").selectedIndex;
     var temperatureDiv = document.querySelector(".right");
-    temperatureDiv.innerHTML = temperatures[dayIndex] + " &deg;C";
+    temperatureDiv.innerHTML = temperatures[day] + " &deg;C";
 
     for (let i = 0; i < temperatureUpperLimits.length; i++) {
-        if (temperatures[dayIndex] <= temperatureUpperLimits[i]) {
+        if (temperatures[day] <= temperatureUpperLimits[i]) {
             offerText.innerHTML = offers[i];
             break;
         };
