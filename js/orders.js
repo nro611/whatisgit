@@ -9,6 +9,7 @@ function calcAmount() {
     let email = document.querySelector("#inputEmail").value.trim();
     let address = document.querySelector("#inputAddress").value.trim();
     let comment = document.querySelector("#inputComment").value.trim();
+    let quantity = parseInt(document.querySelector("input[name='quantity']").value);
 
     validatingInputs(name, email, address, comment, quantity);
 }
@@ -23,14 +24,13 @@ function validatingInputs(name, email, address, comment, quantity) {
     } else if (comment.indexOf("<") >= 0 && comment.indexOf(">") >= 0) {
         alert("A megjegyzésben nem megengedett a HTML használata.");
     } else if (!quantity || quantity < 1 || quantity > 10) {
-        alert("A rendelés mennyisége minimum 1, maximum 10 darab.")
+        alert("A rendelés mennyisége minimum 1, maximum 10 darab.");
     } else {
         finalCalculation(quantity);
     }
 }
 //végső kalkulálás, delivery hozzáadás
 function finalCalculation() {
-    let quantity = parseInt(document.querySelector("input[name='quantity']").value);
     let extraPrice = parseInt(document.querySelector("input[name=extraOrder]:checked").value);
     let sauceType = parseInt(document.querySelector("#sauceList").value);
 

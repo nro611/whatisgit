@@ -9,10 +9,19 @@ var offers = ["Ma forró csokit is árusítunk",
 
 
 //temperatures array-ből kiválaszt egy elemet a nap függvényében és kiírja, mint hőmérséklet és a hozzá tartozó ajánlatot
+
+function calculateFahrenheit(celsius) {
+    return (celsius * 9 / 5 + 32).toFixed(2);
+}
+
 function weatherWidget() {
     var day = document.getElementById("day").selectedIndex;
     var temperatureDiv = document.querySelector(".right");
-    temperatureDiv.innerHTML = temperatures[day] + " &deg;C";
+    if (document.getElementById('fahrenheit').checked) {
+        temperatureDiv.innerHTML = calculateFahrenheit(temperatures[day]) + " &deg;F"
+    } else {
+        temperatureDiv.innerHTML = temperatures[day] + " &deg;C";
+    }
 
     for (let i = 0; i < temperatureUpperLimits.length; i++) {
         if (temperatures[day] <= temperatureUpperLimits[i]) {
@@ -20,6 +29,9 @@ function weatherWidget() {
             break;
         };
     }
+    minTempStats()
+    maxTempStats()
+    avgTempStats()
 }
 
 function minTempStats() {
@@ -30,7 +42,12 @@ function minTempStats() {
             minTemp = temperatures[i];
         }
     }
-    minText.innerHTML = "Minimum: " + minTemp + " &deg;C";
+
+    if (document.getElementById('fahrenheit').checked) {
+        minText.innerHTML = "Minimum: " + calculateFahrenheit(minTemp) + " &deg;F"
+    } else {
+        minText.innerHTML = "Minimum: " + minTemp + " &deg;C";
+    }
 }
 
 
@@ -42,7 +59,12 @@ function maxTempStats() {
             maxTemp = temperatures[i];
         }
     }
-    maxText.innerHTML = "Maximum: " + maxTemp + " &deg;C";
+
+    if (document.getElementById('fahrenheit').checked) {
+        maxText.innerHTML = "Maximum: " + calculateFahrenheit(maxTemp) + " &deg;F"
+    } else {
+        maxText.innerHTML = "Maximum: " + maxTemp + " &deg;C";
+    }
 }
 
 function avgTempStats() {
@@ -50,9 +72,16 @@ function avgTempStats() {
     var avgText = document.querySelector(".avg-temp");
     for (let i = 0; i < temperatures.length; i++) {
         avgTemp += temperatures[i];
-        }
+    }
     avgTemp = avgTemp / temperatures.length;
     avgText.innerHTML = "Átlag: " + avgTemp.toFixed(2) + " &deg;C";
+
+    if (document.getElementById('fahrenheit').checked) {
+        avgText.innerHTML = "Átlag: " + calculateFahrenheit(avgTemp) + " &deg;F"
+    } else {
+        avgText.innerHTML = "Átlag: " + avgTemp.toFixed(2) + " &deg;C";
+    }
+    
 }
 
 

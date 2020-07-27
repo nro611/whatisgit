@@ -19,7 +19,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-2" id="day-select">
+            <div class="col-2">
                 <select class="form-control" id="day">
                     <option>Hétfő</option>
                     <option>Kedd</option>
@@ -30,11 +30,23 @@
                     <option>Vasárnap</option>
                 </select>
             </div>
-            <div class="col-1" id="weather-button">
+            <div class="col-1 temp-radio">
+                <input class="form-check-input" type="radio" name="radio-temperature" id="celsius" checked>
+                <label class="form-check-label" for="celsius">
+                    Celsius
+                </label>
+            </div>
+            <div class="col-1 temp-radio">
+                <input class="form-check-input" type="radio" name="radio-temperature" id="fahrenheit">
+                <label class="form-check-label" for="fahrenheit">
+                    Fahrenheit
+                </label>
+            </div>
+            <div class="col-1">
                 <button onclick="weatherWidget()" type="button" class="btn btn-warning">Mutasd!</button>
             </div>
             <div class="col-1"></div>
-            <div class="col-8 offer-text right"></div>
+            <div class="col-6 offer-text right"></div>
         </div>
         <div class="row">
             <div class="col-4 min-temp offer-text left"></div>

@@ -164,7 +164,7 @@ tbody tr:nth-child(odd){
 .biggerLetters {
     font-size: 26px;
 }
-input[type=radio] {
+form input[type=radio] {
     vertical-align: middle;
     margin-top: 10px;
     background-color: black;
