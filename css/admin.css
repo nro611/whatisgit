@@ -1,0 +1,22 @@
+.navbar-brand {
+    margin-left: 10px;
+}
+nav {
+    height: 40px;
+}
+
+h3 {
+    background-color: rgba(95, 95, 95, 0.15);
+    height: 110px;
+    text-align: center;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.mod-rem {
+    text-align: right;
+}
+
