@@ -48,3 +48,15 @@ for (let k in users) {
     createButtonGRoup(tr);
     tableBody.appendChild(tr);
 };
+
+let addUserButton = document.querySelector(".mid button");
+let addUserName = document.querySelector("input#inputName");
+let addEmail = document.querySelector("input#inputEmail");
+let addAddress = document.querySelector("input#inputAddress");
+
+addUserButton.addEventListener("click", function(){
+    let newName = addUserName.value;
+    let newEmail = addEmail.value;
+    let newAddress = addAddress.value;
+    users.push({name: newName, email: newEmail, address: newAddress});
+});

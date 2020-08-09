@@ -20,3 +20,16 @@ h3 {
     text-align: right;
 }
 
+.mid {
+    text-align: justify;
+    display: inline-block;
+}
+
+.newUser {
+    margin-bottom: 60px;
+    
+}
+
+#newUser{
+    margin-bottom: 20px;
+}
